@@ -8,7 +8,10 @@ __all__ = ['MRMR']
 import numpy as np
 from sklearn.base import BaseEstimator, clone
 from sklearn.feature_selection.base import SelectorMixin
-from sklearn.utils import check_arrays, safe_mask
+# new version of sklearn by chanson 2018-12-10
+from sklearn.utils.validation import check_array as check_arrays
+from sklearn.utils import safe_mask
+#from sklearn.utils import check_arrays, safe_mask
 from ._mrmr import _mrmr, MAXREL, MID, MIQ
 
 
